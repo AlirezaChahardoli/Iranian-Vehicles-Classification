@@ -1,0 +1,16 @@
+torch
+torchmetrics
+torchvision
+os
+gradio
+Pillow
+shutil
+timeit
+mlxtend.plotting
+tqdm
+albumentations
+opencv-python
+scikit-learn
+numpy
+pillow 
+matplotlib

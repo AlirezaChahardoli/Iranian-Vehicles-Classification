@@ -17,7 +17,7 @@
 **This model is specifically optimized for cropped vehicle images taken from front view traffic cameras.
 The model does not perform well on images containing multiple objects, street scenes, or non-vehicle content.
 Intended use: vehicle classification after detection step.**
-**The model is trained on 224*224 RGB images. input images must be Normalized using the following mean and std values.(as used during training):**
+**The model is trained on** *224x224* **RGB images. input images must be Normalized using the following mean and std values.(as used during training):**
 ```python
 transform = transforms.Compose([
         transforms.Resize((224, 224)),
@@ -28,7 +28,8 @@ transform = transforms.Compose([
     ])
 ```
 
-# 🌐 Gradio Demo (Live Test)
+# 🌐 Gradio Demo Deployment(Live Test)
+**The model is deployed using Gradio, allowing users to test it online by uploading an image of a close-up Iranian vehicle.**
 
  **🚦 Try the model live using the link below:**
 #        --------Click-------> [Live Test](https://huggingface.co/spaces/Alirezachahardoli/Tannan1) 
@@ -139,16 +140,29 @@ A **custom Convolutional Neural Network (CNN)** was designed and trained **from 
             
 
 
-- 🔗 Gradio Deployment Link
-
-- 🧪 Upload a close-up image of a vehicle for instant classification!
-
-- 🛠 How to Run
+---
 
 
-1. Clone the Repository
 
+# 🛠 How to Run:
+
+## 🔗 Clone the Repository
+```bash
+git clone https://github.com/AlirezaChahardoli/Iranian-Vehicles-Classification.git
+cd Iranian-Vehicles-Classification
+```
 
 ## installa Requirements
 
+```bash
 pip install -r requirements.txt
+```
+
+## Run the Gradio app:
+```bash
+python app.py
+```
+## For training the model from scratch:
+```bash
+python main.py
+```

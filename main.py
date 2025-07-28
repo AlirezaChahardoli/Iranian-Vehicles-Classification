@@ -2,6 +2,7 @@
 main.py runner script.
 """
 import torch
+from torch import nn
 from timeit import default_timer as timer
 from tqdm.auto import tqdm
 import torchvision
@@ -40,8 +41,8 @@ test_losses=[]
 time_start = timer()
 for epoch in tqdm(range(epochs)):
     print(f"Epoch {epoch}/{epochs}")
-    train_acc,train_loss=train_loop(model,train_dataloader,loss_fn,optimizer, scheduler,accuracy,device=str(next(model.parameters()).DEVICE))
-    test_acc,test_loss=test_loop(model,test_dataloader,loss_fn,accuracy, scheduler,device=str(next(model.parameters()).DEVICE))
+    train_acc,train_loss=train_loop(model,train_dataloader,loss_fn,optimizer, scheduler,accuracy)#,device=str(next(model.parameters()).DEVICE))
+    test_acc,test_loss=test_loop(model,test_dataloader,loss_fn,accuracy, scheduler)#,device=str(next(model.parameters()).DEVICE))
 
     train_losses.append(train_loss.item())
     train_accuracies.append(train_acc.item())

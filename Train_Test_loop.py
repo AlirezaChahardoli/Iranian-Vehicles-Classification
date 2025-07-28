@@ -41,7 +41,7 @@ def train_loop(model=nn.Module,
     current_lr=scheduler.optimizer.param_groups[0]['lr']
 
 
-    print(f"\033[92m Learinig rate:{current_lr:.6f}\nTrain_loss:{train_loss:.4f}%\n Train_acc:{train_acc:.4f}%\nDevice is on {DEVICE}\nTime passed for training:{end_time_train-start_time_train:.2f}s\033[0m")
+    print(f"\033[92m Learinig rate:{current_lr:.6f}\nTrain_loss:{train_loss:.4f}%\n Train_acc:{train_acc:.4f}%\n Time passed for training:{end_time_train-start_time_train:.2f}s\033[0m")
 
     return train_acc,train_loss
 
@@ -73,7 +73,7 @@ def test_loop(model=nn.Module,
         end_time_test=timer()
 
 
-        print(f"\033[94mTest_loss:{test_loss:.4f}%\n Test_acc:{test_acc:.4f}%\nDevice is on {DEVICE}\nTime passed for testing:{end_time_test-start_time_test:.2f}s\033[0m")
+        print(f"\033[94mTest_loss:{test_loss:.4f}%\n Test_acc:{test_acc:.4f}%\n Time passed for testing:{end_time_test-start_time_test:.2f}s\033[0m")
         scheduler.step(test_loss)
         current_lr=scheduler.optimizer.param_groups[0]['lr']
         print(f'\033[94m Learning Rate after scheduler step:{current_lr:.6f}')

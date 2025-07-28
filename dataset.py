@@ -15,9 +15,9 @@ def get_dataloaders(dataset_path, batch_size=8):
         transforms.Resize((224, 224)),
         transforms.ToTensor(),
 
-        transforms.Normalize((0.5,), (0.5,))
-
-    ])
+        #transforms.Normalize((0.5,), (0.5,))
+        transforms.Normalize=(mean=(0.5,0.5,0.5),
+                              std=(0.5,0.5,0.5))])
 
 
 

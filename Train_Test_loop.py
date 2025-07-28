@@ -3,6 +3,7 @@ from torch import nn
 import torchmetrics
 from tqdm.auto import tqdm
 from timeit import default_timer as timer
+from config import DEVICE,BATCH_SIZE,SEED,LEARNING_RATE,EPOCHS
 
 """
 training and testing loops.
@@ -20,7 +21,7 @@ def train_loop(model=nn.Module,
     train_acc,train_loss=0,0
     model.train()
     for image,label in data:
-        image,label=image.to(device),label.to(device)
+        image,label=image.to(DEVICE),label.to(DEVICE)
         y_pred_prob=model(image)
         loss=loss_fn(y_pred_prob,label)
         train_loss+=loss
@@ -55,10 +56,10 @@ def test_loop(model=nn.Module,
     torch.cuda.manual_seed(42)
     start_time_test=timer()
     test_acc,test_loss=0,0
-    model.eval().to(device)
+    model.eval().to(DEVICE)
     with torch.inference_mode():
         for image,label in data:
-            image,label=image.to(device),label.to(device)
+            image,label=image.to(DEVICE),label.to(DEVICE)
             y_pred_prob=model(image)
             loss=loss_fn(y_pred_prob,label)
             test_loss+=loss

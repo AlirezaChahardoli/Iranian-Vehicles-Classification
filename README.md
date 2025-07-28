@@ -32,7 +32,7 @@ transform = transforms.Compose([
 **The model is deployed using Gradio, allowing users to test it online by uploading an image of a close-up Iranian vehicle.**
 
  **🚦 Try the model live using the link below:**
-#        --------Click-------> [Live Test](https://huggingface.co/spaces/Alirezachahardoli/Tannan1) 
+#              [Live Test](https://huggingface.co/spaces/Alirezachahardoli/Tannan1) 
 
 
 
@@ -88,7 +88,7 @@ A **custom Convolutional Neural Network (CNN)** was designed and trained **from 
 
 
 ## 🧪 Training Configuration
-- ✅ Dsigned specifically for **Iranian Vehicles** 
+- ✅ Designed specifically for **Iranian Vehicles** 
 
 - 🗂️ Trained using custom PyTorch dataloaders
 
@@ -104,7 +104,7 @@ A **custom Convolutional Neural Network (CNN)** was designed and trained **from 
 
 
 
-## 🖥️ Files Structure
+## 🖥️ Files Structure:
 
 
 ```bash

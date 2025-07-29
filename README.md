@@ -36,11 +36,11 @@ transform = transforms.Compose([
 
 
 
-## 📊 Dataset
+## 📂 Dataset Description
 # ⚠️ Notes:
   **Before training, be sure to run**  *`augment_and_save()` **from** `augmentation.py`* **to generate the augmented dataset**
-
-
+  **The dataset contains a total of 968 images, meaning each class has a limited number of samples.**
+  
 
 - ✅ **Number of Classes:** 20 (Saina,Pride, Pars, Dena, Samand,L90, Renualt-Trucks, Vans, etc.) + Unknown
 
